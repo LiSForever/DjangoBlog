@@ -27,3 +27,4 @@ openai==0.28.1
 
 # 新增
 python-dotenv==1.0.1
+uwsgi==2.0.28
