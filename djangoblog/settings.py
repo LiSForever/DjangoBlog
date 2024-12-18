@@ -204,10 +204,7 @@ if os.environ.get("DJANGO_REDIS_URL"):
     CACHES = {
         'default': {
             'BACKEND': 'django.core.cache.backends.redis.RedisCache',
-            'LOCATION': f'redis://{os.environ.get("DJANGO_REDIS_URL")}',
-            'OPTIONS': {
-                'PASSWORD': os.environ.get("DJANGO_REDIS_PASSWORD"),
-            }
+            'LOCATION': f'redis://:{os.environ.get("DJANGO_REDIS_PASSWORD")}@{os.environ.get("DJANGO_REDIS_URL")}',
         }
     }
 
